@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Biblioteca Imperial</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="catalog-page">
+    <nav class="imperial-nav">
+        <div class="nav-brand">
+            <span class="aquila">⚔</span>
+            <span class="brand-text">BIBLIOTECA IMPERIAL</span>
+        </div>
+        <div class="nav-user">
+            <span id="userName">Carregando...</span>
+            <button onclick="logout()" class="btn-logout">Sair</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>📚 Catálogo de Obras Imperiais</h1>
+            <p>Repositório do conhecimento sagrado do Imperium da Humanidade</p>
+        </header>
+
+        <div class="toolbar">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar obras por título..."
+                    onkeyup="buscarObras()"
+                >
+            </div>
+            <div class="action-buttons">
+                <a href="emprestimos.html" class="btn-secondary">
+                    📋 Meus Empréstimos
+                </a>
+                <a href="admin.html" id="adminLink" class="btn-primary" style="display:none;">
+                    ⚙️ Administração
+                </a>
+            </div>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Consultando arquivos imperiais...</p>
+        </div>
+
+        <div id="errorContainer" class="error-container" style="display: none;"></div>
+
+        <div id="obrasContainer" class="obras-grid">
+            <!-- As obras serão carregadas aqui via JavaScript -->
+        </div>
+    </div>
+
+    <footer class="imperial-footer">
+        <p>Em nome do Imperador da Humanidade ⚔</p>
+        <p class="authors">Samuel Telles | Rafael Machado | Raphael Ryan | Yurik Alexsander</p>
+    </footer>
+
+    <!-- Modal de Detalhes da Obra -->
+    <div id="obraModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="modal-close" onclick="fecharModal()">&times;</span>
+            <div id="obraDetalhes"></div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/catalogo.js"></script>
+</body>
+</html>

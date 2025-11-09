@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Imperial - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="imperial-header">
+            <div class="aquila-symbol">⚔</div>
+            <h1>BIBLIOTECA IMPERIAL</h1>
+            <p class="subtitle">Repositório Sagrado do Conhecimento do Imperium</p>
+        </div>
+
+        <div class="login-box">
+            <h2>Autenticação de Acesso</h2>
+            <p class="login-description">Identifique-se para acessar os arquivos imperiais</p>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">
+                        <span class="icon">📧</span>
+                        Email Imperial
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="usuario@biblioimp.org"
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">
+                        <span class="icon">🔐</span>
+                        Código de Acesso
+                    </label>
+                    <input 
+                        type="password" 
+                        id="senha" 
+                        name="senha" 
+                        placeholder="••••••••"
+                        required
+                        autocomplete="current-password"
+                    >
+                </div>
+
+                <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+                <button type="submit" class="btn-primary" id="loginBtn">
+                    <span class="btn-text">ACESSAR BIBLIOTECA</span>
+                    <span class="btn-icon">⚡</span>
+                </button>
+            </form>
+
+            <div class="login-footer">
+                <p class="credentials-hint">Credenciais de Teste:</p>
+                <code>samuel.resende@biblioimp.org / senha123</code>
+            </div>
+        </div>
+
+        <footer class="imperial-footer">
+            <p>Em nome do Imperador da Humanidade</p>
+            <p class="authors">
+                Desenvolvido por: Samuel Telles, Rafael Machado, Raphael Ryan, Yurik Alexsander
+            </p>
+        </footer>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

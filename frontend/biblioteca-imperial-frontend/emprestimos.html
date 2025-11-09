@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Empréstimos - Biblioteca Imperial</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="emprestimos-page">
+    <nav class="imperial-nav">
+        <div class="nav-brand">
+            <span class="aquila">⚔</span>
+            <span class="brand-text">BIBLIOTECA IMPERIAL</span>
+        </div>
+        <div class="nav-user">
+            <span id="userName">Carregando...</span>
+            <button onclick="logout()" class="btn-logout">Sair</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>📋 Meus Empréstimos</h1>
+            <p>Gerenciamento de obras em sua custódia</p>
+        </header>
+
+        <div class="toolbar">
+            <a href="catalogo.html" class="btn-secondary">
+                ← Voltar ao Catálogo
+            </a>
+            <button onclick="carregarEmprestimos()" class="btn-secondary">
+                🔄 Atualizar
+            </button>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Consultando registros de empréstimos...</p>
+        </div>
+
+        <div id="errorContainer" class="error-container" style="display: none;"></div>
+
+        <div class="emprestimos-stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalAtivos">0</div>
+                <div class="stat-label">Empréstimos Ativos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalAtrasados">0</div>
+                <div class="stat-label">Em Atraso</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalMultas">R$ 0,00</div>
+                <div class="stat-label">Multas Pendentes</div>
+            </div>
+        </div>
+
+        <div id="emprestimosContainer" class="emprestimos-list">
+            <!-- Os empréstimos serão carregados aqui via JavaScript -->
+        </div>
+
+        <div id="emptyState" class="empty-state" style="display: none;">
+            <div class="empty-icon">📚</div>
+            <h3>Nenhum empréstimo ativo</h3>
+            <p>Você não possui obras em custódia no momento.</p>
+            <a href="catalogo.html" class="btn-primary">Explorar Catálogo</a>
+        </div>
+    </div>
+
+    <footer class="imperial-footer">
+        <p>Em nome do Imperador da Humanidade ⚔</p>
+        <p class="authors">Samuel Telles | Rafael Machado | Raphael Ryan | Yurik Alexsander</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/emprestimos.js"></script>
+</body>
+</html>
