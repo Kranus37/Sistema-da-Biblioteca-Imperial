@@ -10,15 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Controller para gerenciamento de exemplares
- * Retorna DTOs para evitar problemas de serialização JSON
- * 
- * @author Samuel Telles de Vasconcellos Resende
- * @author Rafael Machado dos Santos
- * @author Raphael Ryan Pires Simão
- * @author Yurik Alexsander Soares Feitosa
- */
+
 @RestController
 @RequestMapping("/api/exemplares")
 @CrossOrigin(origins = "*")
