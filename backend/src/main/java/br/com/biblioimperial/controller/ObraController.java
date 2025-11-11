@@ -13,14 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * Controller REST para operações com Obras
- * 
- * @author Samuel Telles de Vasconcellos Resende
- * @author Rafael Machado dos Santos
- * @author Raphael Ryan Pires Simão
- * @author Yurik Alexsander Soares Feitosa
- */
+
 @RestController
 @RequestMapping("/api/obras")
 @RequiredArgsConstructor
