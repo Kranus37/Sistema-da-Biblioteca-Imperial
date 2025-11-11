@@ -10,7 +10,6 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
  * 
  * Sistema de gerenciamento de biblioteca com temática Warhammer 40k
  *
- * @version 1.0.0
  */
 @SpringBootApplication
 @EnableJpaRepositories(basePackages = "br.com.biblioimperial.repository.mysql")
