@@ -19,14 +19,7 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-/**
- * Controller para gerenciamento de empréstimos
- * 
- * @author Samuel Telles de Vasconcellos Resende
- * @author Rafael Machado dos Santos
- * @author Raphael Ryan Pires Simão
- * @author Yurik Alexsander Soares Feitosa
- */
+
 @RestController
 @RequestMapping("/api/emprestimos")
 @CrossOrigin(origins = "*")
