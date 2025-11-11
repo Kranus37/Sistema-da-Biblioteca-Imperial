@@ -9,10 +9,6 @@ import java.util.Set;
 /**
  * DTO para Obra com informações adicionais calculadas
  * 
- * @author Samuel Telles de Vasconcellos Resende
- * @author Rafael Machado dos Santos
- * @author Raphael Ryan Pires Simão
- * @author Yurik Alexsander Soares Feitosa
  */
 public class ObraDTO {
     
