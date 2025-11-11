@@ -5,7 +5,6 @@ COLLATE utf8mb4_bin;
 UPDATE exemplares SET estado_conservacao = 'BOM' WHERE id_exemplar = 'EXE-166980';
 SELECT estado_conservacao FROM exemplares WHERE id_exemplar = 'EXE-166980';
 
--- Atualizar todos de uma vez
 UPDATE exemplares SET estado_conservacao = 'BOM' 
 WHERE estado_conservacao IN ('Bom', 'bom', 'BOM');
 
@@ -15,5 +14,4 @@ WHERE estado_conservacao IN ('Excelente', 'excelente', 'EXCELENTE');
 UPDATE exemplares SET estado_conservacao = 'REGULAR' 
 WHERE estado_conservacao IN ('Regular', 'regular', 'REGULAR');
 
--- Verificar resultado
 SELECT DISTINCT estado_conservacao FROM exemplares;
