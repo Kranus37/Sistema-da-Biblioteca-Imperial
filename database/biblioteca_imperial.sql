@@ -1325,39 +1325,16 @@ INSERT INTO exemplares (id_exemplar, id_obra, codigo_barras, estado_conservacao,
 (gerar_id_exemplar(), (SELECT id_obra FROM obras WHERE titulo = 'Xenos: Uma Ameaça Constante'),
  'BIMP-0004-001', 'Regular', TRUE, '2024-03-20', 120.00);
 
--- ============================================================================
--- SEÇÃO 10: COMENTÁRIOS FINAIS E DOCUMENTAÇÃO
--- ============================================================================
+-- SEÇÃO 10: COMENTÁRIOS FINAIS E BREVE DOCUMENTAÇÃO
 
 -- Este script SQL implementa todos os requisitos obrigatórios do trabalho:
 --
--- 1. ✓ Estrutura completa de tabelas com relacionamentos
--- 2. ✓ Índices com justificativas (12 índices criados)
--- 3. ✓ Triggers (mínimo 2, implementados 5)
--- 4. ✓ Views (mínimo 2, implementadas 4)
--- 5. ✓ Procedures e Functions (mínimo 2, implementadas 4 procedures e 12 functions)
--- 6. ✓ Usuários e controle de acesso (5 usuários com diferentes níveis)
--- 7. ✓ Tabelas obrigatórias: usuarios e grupos_usuarios
--- 8. ✓ Geração de IDs customizada (funções específicas para cada tabela)
--- 9. ✓ Justificativa para uso de AUTO_INCREMENT (apenas em logs_sistema)
---
--- Temática: Biblioteca Imperial (Warhammer 40k)
--- - Grupos de usuários representam hierarquias imperiais
--- - Categorias refletem o conhecimento do Imperium
--- - Nomenclatura e descrições seguem o universo de Warhammer 40k
---
--- Complexidade: Adequada ao 4º semestre de Engenharia de Software
--- - Uso de conceitos fundamentais de SQL
--- - Implementação de boas práticas de modelagem
--- - Código limpo e bem documentado
--- - Evita complexidade desnecessária
---
--- Autores:
---   - Samuel Telles de Vasconcellos Resende
---   - Rafael Machado dos Santos
---   - Raphael Ryan Pires Simão
---   - Yurik Alexsander Soares Feitosa
---
--- ============================================================================
--- FIM DO SCRIPT
--- ============================================================================
+-- 1.  Estrutura completa de tabelas com relacionamentos
+-- 2.  Índices com justificativas (12 índices criados)
+-- 3.  Triggers (mínimo 2, implementados 6)
+-- 4.  Views (mínimo 2, implementadas 4)
+-- 5.  Procedures e Functions (mínimo 2, implementadas 4 procedures e 11 functions)
+-- 6.  Usuários e controle de acesso (5 usuários com diferentes níveis)
+-- 7.  Tabelas obrigatórias: usuarios e grupos_usuarios
+-- 8.  Geração de IDs customizada (funções específicas para cada tabela)
+-- 9.  Justificativa para uso de AUTO_INCREMENT (apenas em logs_sistema)
