@@ -1,6 +1,4 @@
--- ============================================================================
 -- USUÁRIOS TEMÁTICOS WARHAMMER 40K - VERSÃO SAFE MODE
--- Compatível com MySQL Workbench Safe Update Mode
 
 USE biblioteca_imperial;
 
