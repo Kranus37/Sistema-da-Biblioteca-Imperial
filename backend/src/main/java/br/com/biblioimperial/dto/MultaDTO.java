@@ -11,11 +11,7 @@ import java.time.LocalDateTime;
 /**
  * DTO para transferência de dados de Multa
  * Evita problemas de serialização JSON com relações circulares
- * 
- * @author Samuel Telles de Vasconcellos Resende
- * @author Rafael Machado dos Santos
- * @author Raphael Ryan Pires Simão
- * @author Yurik Alexsander Soares Feitosa
+ *
  */
 @Data
 @NoArgsConstructor
