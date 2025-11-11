@@ -1,13 +1,5 @@
--- ============================================================================
--- Script: ADICIONAR_EXEMPLARES.sql
--- Descrição: Adiciona exemplares físicos para todas as obras do catálogo
--- Autor: Sistema Biblioteca Imperial
--- Data: 2025-11-09
--- ============================================================================
-
 USE biblioteca_imperial;
 
--- Adicionar 3 exemplares para "Codex Astartes"
 INSERT INTO exemplares (id_exemplar, id_obra, codigo_barras, estado_conservacao, disponivel, data_aquisicao, valor_aquisicao, observacoes) VALUES
 (CONCAT('EXE-', LPAD(FLOOR(RAND() * 999999), 6, '0')), 
  (SELECT id_obra FROM obras WHERE titulo = 'Codex Astartes' LIMIT 1),
@@ -36,7 +28,6 @@ INSERT INTO exemplares (id_exemplar, id_obra, codigo_barras, estado_conservacao,
  150.00,
  'Exemplar terciário - Reserva Técnica');
 
--- Adicionar 2 exemplares para "A Heresia de Horus"
 INSERT INTO exemplares (id_exemplar, id_obra, codigo_barras, estado_conservacao, disponivel, data_aquisicao, valor_aquisicao, observacoes) VALUES
 (CONCAT('EXE-', LPAD(FLOOR(RAND() * 999999), 6, '0')), 
  (SELECT id_obra FROM obras WHERE titulo = 'A Heresia de Horus' LIMIT 1),
@@ -56,7 +47,6 @@ INSERT INTO exemplares (id_exemplar, id_obra, codigo_barras, estado_conservacao,
  180.00,
  'Exemplar para consulta - Acervo Geral');
 
--- Adicionar 2 exemplares para "Mistérios do Mechanicus"
 INSERT INTO exemplares (id_exemplar, id_obra, codigo_barras, estado_conservacao, disponivel, data_aquisicao, valor_aquisicao, observacoes) VALUES
 (CONCAT('EXE-', LPAD(FLOOR(RAND() * 999999), 6, '0')), 
  (SELECT id_obra FROM obras WHERE titulo = 'Mistérios do Mechanicus' LIMIT 1),
@@ -76,7 +66,6 @@ INSERT INTO exemplares (id_exemplar, id_obra, codigo_barras, estado_conservacao,
  120.00,
  'Exemplar com anotações - Uso interno');
 
--- Adicionar 3 exemplares para "Xenos: Uma Ameaça Constante"
 INSERT INTO exemplares (id_exemplar, id_obra, codigo_barras, estado_conservacao, disponivel, data_aquisicao, valor_aquisicao, observacoes) VALUES
 (CONCAT('EXE-', LPAD(FLOOR(RAND() * 999999), 6, '0')), 
  (SELECT id_obra FROM obras WHERE titulo = 'Xenos: Uma Ameaça Constante' LIMIT 1),
@@ -105,7 +94,6 @@ INSERT INTO exemplares (id_exemplar, id_obra, codigo_barras, estado_conservacao,
  190.00,
  'Exemplar de empréstimo - Circulação');
 
--- Verificar exemplares cadastrados
 SELECT 
     e.id_exemplar,
     o.titulo AS obra,
@@ -117,7 +105,6 @@ FROM exemplares e
 INNER JOIN obras o ON e.id_obra = o.id_obra
 ORDER BY o.titulo, e.data_cadastro;
 
--- Estatísticas de exemplares por obra
 SELECT 
     o.titulo AS obra,
     COUNT(e.id_exemplar) AS total_exemplares,
@@ -127,7 +114,3 @@ FROM obras o
 LEFT JOIN exemplares e ON o.id_obra = e.id_obra
 GROUP BY o.id_obra, o.titulo
 ORDER BY o.titulo;
-
--- ============================================================================
--- FIM DO SCRIPT
--- ============================================================================
