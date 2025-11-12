@@ -1,7 +1,6 @@
 package br.com.biblioimperial.controller;
 
 import br.com.biblioimperial.model.mysql.Usuario;
-import br.com.biblioimperial.dto.UsuarioCreateDTO;
 import br.com.biblioimperial.service.UsuarioService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
